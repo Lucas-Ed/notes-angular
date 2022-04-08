@@ -1,4 +1,5 @@
 # Desafio Angular My Notes
+ ### Desafio 2° proposto pelo colega [Rafael](https://github.com/rpaivabr)do grupo de estudos de frontend.
 
 Sabemos a importância da aplicação se comunicar com uma API para ler e persistir informações. Ao compartilhar a mesma API com mais pessoas, ganhamos conectividade e reaproveitamento da mesma informação, mesmo com diferentes aplicações front-end.
 
@@ -43,3 +44,8 @@ Para isso, temos a dependência de desenvolvimento já instalada (json-server), 
 
 - [Usando GET e POST com fetchAPI](https://www.youtube.com/watch?v=CXLsvT9mSo8)
 - [Stackblitz html-dialog](https://stackblitz.com/edit/angular-ivy-2dno9p)
+
+<!-- ### Visão do Layout final
+<a href="#">
+    <img src="img/projeto.png" alt="html" style="vertical-align:top; margin:6px 4px">
+  </a> -->
