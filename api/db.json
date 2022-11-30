@@ -1,17 +1,32 @@
 {
   "notes": [
     {
-      "title": "Title",
-      "content": "Content",
-      "categoryId": 1,
-      "id": 1
+      "id": 2,
+      "title": "Node-JS",
+      "content": "Estudar node as 16:00  horas !",
+      "categoryId": "4"
     }
   ],
   "categories": [
     {
+      "id": 1,
+      "name": "Angular",
+      "color": "#f6c2d9"
+    },
+    {
+      "id": 2,
       "name": "React",
-      "color": "#87cefa",
-      "id": 1
+      "color": "#a1c8e9"
+    },
+    {
+      "id": 3,
+      "name": "Vue",
+      "color": "#bcdfc9"
+    },
+    {
+      "id": 4,
+      "name": "Backend",
+      "color": "#255db6"
     }
   ]
 }

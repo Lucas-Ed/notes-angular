@@ -1,68 +1,49 @@
-<header>
+<header class="header">
   <div class="container">
-    <div class="logo">{{ logo }}</div>
+    <div class="logo" style="color:white;">{{ logo }}</div>
   </div>
 </header>
 
-<main class="container">
-  <aside>
-    <div class="title">
-      <h3>Categories</h3>
-      <button (click)="openDialog('category')">Add new</button>
+<main class="container, aside"><!-- Para mudar basta tirar a classe aside -->
+  <aside class="aside">
+    <div class="title" style="color:white;">
+      <h3 style="color:white;">Categories</h3>
+      <button class="btn" (click)="openCategoryDialog()">Add new</button>
     </div>
-    <div class="category">
-      <span class="dot" [ngStyle]="{'background-color': '#87cefa'}"></span>
-      <span>React</span>
-    </div>
-    <div class="category">
-      <span class="dot"></span>
-    </div>
+    <app-category
+      style="color:white;"
+      *ngFor="let category of categories"
+      [category]="category"
+      (click)="openCategoryDialog(category)"
+    ></app-category>
   </aside>
 
-  <section>
+  <section class="section">
     <div class="title">
-      <h3>Notes</h3>
-      <button (click)="openDialog('note')">Add new</button>
+      <h3 style="color:white;">Notes</h3>
+      <button class="btn" (click)="openNoteDialog()">Add new</button>
     </div>
     <div class="notes-list">
-      <div class="note" [ngStyle]="{'background-color': '#87cefa'}">
-        <h4>Title</h4>
-        <p>Content</p>
-      </div>
-      <div class="note"></div>
-      <div class="note"></div>
-      <div class="note"></div>
-      <div class="note"></div>
+      <app-note
+        *ngFor="let note of notes"
+        [note]="note"
+        [color]="noteColor(note.categoryId)"
+        (click)="openNoteDialog(note)"
+      ></app-note>
     </div>
   </section>
 </main>
 
-<div class="overlay" *ngIf="hasOpenDialog">
-  <dialog class="center" *ngIf="isNoteDialogOpen">
-    <div class="dialog-content">
-      <h2>Note Dialog Title</h2>
-      <p>
-        In order to give an example of paragraph, we kindly ask you to change and
-        use anything you want as content
-      </p>
-    </div>
-    <div class="dialog-actions">
-      <button (click)="closeDialog('note')">Cancel</button>
-      <button (click)="closeDialog('note')">Confirm</button>
-    </div>
-  </dialog>
-  <dialog class="center" *ngIf="isCategoryDialogOpen">
-    <div class="dialog-content">
-      <h2>Category Dialog Title</h2>
-      <p>
-        In order to give an example of paragraph, we kindly ask you to change and
-        use anything you want as content
-      </p>
-    </div>
-    <div class="dialog-actions">
-      <button (click)="closeDialog('category')">Cancel</button>
-      <button (click)="closeDialog('category')">Confirm</button>
-    </div>
-  </dialog>
+<div class="overlay" *ngIf="isCategoryDialogOpen || isNoteDialogOpen">
+  <app-dialog-category
+    [open]="isCategoryDialogOpen"
+    [category]="categoryToUpdate"
+    (close)="updateCategory($event)"
+  ></app-dialog-category>
+  <app-dialog-note
+    [open]="isNoteDialogOpen"
+    [note]="noteToUpdate"
+    [categories]="categories"
+    (close)="updateNote($event)"
+  ></app-dialog-note>
 </div>
-

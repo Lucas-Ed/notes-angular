@@ -20,6 +20,9 @@ Para isso, temos a dependência de desenvolvimento já instalada (json-server), 
 - [x] Utilizar metodo fetch (asíncrono) para requisições HTTP (métodos GET, POST, PUT e DELETE), ou o HttpClientModule
 - [x] Manter chamadas de APIs apenas no componente principal (app component) e não em outros componentes
 
+# Layout 
+![](img/notes.png)
+
 ## Features
 
 - [ ] Criar componentes ao seu critério, havendo pelo menos 2 componentes além do componente principal
