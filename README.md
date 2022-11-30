@@ -7,7 +7,7 @@ Usando como referência nossos estudos anteriores, neste projeto vamos criar uma
   
 Para isso, temos a dependência de desenvolvimento já instalada (json-server), e para rodar, basta o comando `npm run api`, e a api estará funcionando no endereço http://localhost:3333):
 
-## Configuração inicial
+## Configuração inicial.
 
 - [x] Arquivos para o json-server: `/api/db.json` , script para rodar api: `npm run api`
 - [x] Arquivo de estilo css [Normalize](https://necolas.github.io/normalize.css/)  já na pasta `/assets` e importado index.html (reset)
